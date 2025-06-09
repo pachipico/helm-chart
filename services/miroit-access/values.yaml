@@ -3,7 +3,7 @@ name: miroit-access
 service:
   name: miroit-access
   type: ClusterIP
-  port: 3000
+  port: 80
 
 image:
   repository: miroit/miroit-access
