@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/miroit-access
-tag: 'ba1e891'
+tag: '79479d8'
 
 replicaCount: 1
 
