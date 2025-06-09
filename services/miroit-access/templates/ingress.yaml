@@ -16,4 +16,4 @@ spec:
               service:
                 name: {{ .Values.service.name }}-active
                 port:
-                  number: 3000
+                  number: 80
