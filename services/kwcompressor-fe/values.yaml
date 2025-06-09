@@ -1,0 +1,18 @@
+name: kwcompressor-fe
+
+service:
+  name: kwcompressor-fe
+  type: ClusterIP
+  port: 80
+
+image:
+  repository: miroit/kwcompressor-fe
+tag: latest
+
+replicaCount: 1
+
+global:
+  #  configMapName: dev-configmap
+  activeProfile: local
+  #  discoveryUrl: http://spring-cloud-kubernetes-discoveryserver:80
+  logPath: /root/logs
