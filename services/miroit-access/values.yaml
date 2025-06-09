@@ -1,12 +1,12 @@
-name: miro-access
+name: miroit-access
 
 service:
-  name: miro-access
+  name: miroit-access
   type: ClusterIP
   port: 3000
 
 image:
-  repository: miroit/miro-access
+  repository: miroit/miroit-access
 tag: 'latest'
 
 replicaCount: 1

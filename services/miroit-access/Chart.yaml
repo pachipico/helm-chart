@@ -1,6 +1,6 @@
 apiVersion: v2
-name: miro-access
-description: miro-sys miro-access chart
+name: miroit-access
+description: miro-sys miroit-access chart
 
 # A chart can be either an 'application' or a 'library' chart.
 #
