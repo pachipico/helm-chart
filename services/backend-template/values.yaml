@@ -1,0 +1,18 @@
+name: backend-template
+
+service:
+  name: backend-template
+  type: ClusterIP
+  port: 8080
+
+image:
+  repository: pachipico/test
+tag: 'd5a124c'
+
+replicaCount: 1
+
+global:
+  #  configMapName: dev-configmap
+  activeProfile: local
+  #  discoveryUrl: http://spring-cloud-kubernetes-discoveryserver:80
+  logPath: /root/logs

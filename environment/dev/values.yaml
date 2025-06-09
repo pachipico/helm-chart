@@ -1,0 +1,10 @@
+global:
+#  configMapName: dev-configmap
+  activeProfile: local
+#  discoveryUrl: http://spring-cloud-kubernetes-discoveryserver:80
+  logPath: /root/logs
+#  storagePath: /root/kubernetes/files
+#  sslPath: /root/kubernetes/ssl
+#  awsPath: /root/.aws
+
+tag: '9ce796b'
