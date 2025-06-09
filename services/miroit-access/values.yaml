@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/miroit-access
-tag: '6850711'
+tag: 'cdb8856'
 
 replicaCount: 1
 
