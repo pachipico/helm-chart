@@ -1,6 +1,6 @@
 apiVersion: v2
-name: test
-description: miro-sys teset chart
+name: initial
+description: miro-sys initial chart
 
 # A chart can be either an 'application' or a 'library' chart.
 #

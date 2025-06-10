@@ -1,13 +1,13 @@
-name: backend-template
+name: initial
 
 service:
-  name: backend-template
+  name: initial
   type: ClusterIP
   port: 8080
 
 image:
-  repository: pachipico/test
-tag: 'd5a124c'
+  repository: miroit/initial
+tag: latest
 
 replicaCount: 1
 
