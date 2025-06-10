@@ -10,7 +10,7 @@ spec:
     - host: {{ .Values.service.name }}.miroit.kro.kr
       http:
         paths:
-          - path: /{{ .Values.service.name }}
+          - path: /api
             pathType: Prefix
             backend:
               service:
