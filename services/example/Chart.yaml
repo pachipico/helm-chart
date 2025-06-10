@@ -1,6 +1,6 @@
 apiVersion: v2
-name: initial
-description: miro-sys initial chart
+name: example
+description: miro-sys example chart
 
 # A chart can be either an 'application' or a 'library' chart.
 #

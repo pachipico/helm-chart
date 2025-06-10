@@ -1,12 +1,12 @@
-name: initial
+name: example
 
 service:
-  name: initial
+  name: example
   type: ClusterIP
   port: 8080
 
 image:
-  repository: miroit/initial
+  repository: miroit/example
 tag: latest
 
 replicaCount: 1
