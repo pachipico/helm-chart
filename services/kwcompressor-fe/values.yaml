@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/kwcompressor-fe
-tag: '8e6296a'
+tag: 'ad59852'
 
 replicaCount: 1
 
