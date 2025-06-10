@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/kwcompressor-fe
-tag: latest
+tag: '89e0104'
 
 replicaCount: 1
 
