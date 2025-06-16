@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/example
-tag: '3be5b5e'
+tag: '23ffcae'
 
 replicaCount: 1
 
