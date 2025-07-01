@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ .Values.service.name }}-ingress
+spec:
+  rules:
+    - host: nexus.miroit.kro.kr
+      http:
+        paths:
+          - backend:
+              serviceName: {{ .Values.service.name }}
+              servicePort: 80
+            path: /
+            pathType: Prefix
