@@ -1,13 +1,13 @@
-name: miroit-access
+name: miroit-access-fe
 
 service:
-  name: miroit-access
+  name: miroit-access-fe
   type: ClusterIP
   port: 80
 
 image:
-  repository: miroit/miroit-access
-tag: '879d7c9'
+  repository: miroit/miroit-access-fe
+tag: '38c91ae'
 
 replicaCount: 1
 
