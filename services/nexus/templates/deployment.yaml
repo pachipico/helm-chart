@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nexus
+  namespace: nexus
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: {{ .Values.service.name }}
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: {{ .Values.service.name }}
+    spec:
+      containers:
+        - image: {{ .Values.image.repository }}
+          imagePullPolicy: IfNotPresent
+          name: {{ .Values.service.name }}
+          ports:
+            - containerPort: 8081
+              protocol: TCP
+          resources:  ## resource는 사용환경에 맞게 유동적으로 조절
+            limits:
+              cpu: "1.5"
+              memory: 4Gi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+            - mountPath: {{ .Values.global.logPath }}/nexus
+              name: {{ .Values.service.name }}-pvc
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+        - name: {{ .Values.service.name }}-pvc
+          persistentVolumeClaim:
+            claimName: {{ .Values.service.name }}
