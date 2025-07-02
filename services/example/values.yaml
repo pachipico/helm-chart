@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/example
-tag: '5af840a'
+tag: 'c700be8'
 
 replicaCount: 1
 
