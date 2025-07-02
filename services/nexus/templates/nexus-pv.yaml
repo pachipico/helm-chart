@@ -5,7 +5,7 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: {{ .Values.service.name }}-pv
+{{/*  storageClassName: {{ .Values.service.name }}-pv*/}}
   capacity:
     storage: 20Gi
   accessModes:
