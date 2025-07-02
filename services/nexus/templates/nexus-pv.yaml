@@ -5,10 +5,10 @@ metadata:
   labels:
     type: local
 spec:
-{{/*  storageClassName: {{ .Values.service.name }}-pv*/}}
+{{/*  storageClassName: ""*/}}
   capacity:
     storage: 20Gi
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   hostPath:
     path: "/root/nexus"
