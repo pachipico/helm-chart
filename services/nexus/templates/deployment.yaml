@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nexus
-  namespace: nexus
+  name: {{ .Values.service.name }}
+  namespace: {{ .Values.service.name }}
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
