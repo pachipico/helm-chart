@@ -1,0 +1,18 @@
+name: config-server
+
+service:
+  name: config-server
+  type: ClusterIP
+  port: 8888
+
+image:
+  repository: miroit/config-server
+tag: '8a8e9d3'
+
+replicaCount: 1
+
+global:
+  #  configMapName: dev-configmap
+  activeProfile: local
+  #  discoveryUrl: http://spring-cloud-kubernetes-discoveryserver:80
+  logPath: /root/logs
