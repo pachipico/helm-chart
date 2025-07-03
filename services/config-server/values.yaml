@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/config-server
-tag: '32f4558'
+tag: '73cd55f'
 
 replicaCount: 1
 
