@@ -3,7 +3,7 @@ name: visit-api
 service:
   name: visit-api
   type: ClusterIP
-  port: 7001
+  port: 9091
 
 image:
   repository: miroit/visit-api
@@ -13,6 +13,6 @@ replicaCount: 1
 
 global:
   #  configMapName: dev-configmap
-  activeProfile: local
+  activeProfile: dev
   #  discoveryUrl: http://spring-cloud-kubernetes-discoveryserver:80
   logPath: /root/logs
