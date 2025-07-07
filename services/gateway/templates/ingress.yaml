@@ -14,6 +14,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ .Values.service.name }}-active
+                name: {{ .Values.service.name }}
                 port:
-                  number: 8080
+                  number: 9000
