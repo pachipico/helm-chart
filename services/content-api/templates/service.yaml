@@ -5,7 +5,6 @@ metadata:
 spec:
   selector:
     app: {{ .Values.name }}
-    track: stable
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
