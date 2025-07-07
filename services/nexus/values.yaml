@@ -16,4 +16,4 @@ global:
   activeProfile: local
   #  discoveryUrl: http://spring-cloud-kubernetes-discoveryserver:80
   logPath: /root/logs
-  volumePath: /nexus-data
+  volumePath: /root/nexus
