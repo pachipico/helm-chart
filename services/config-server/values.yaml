@@ -16,3 +16,15 @@ global:
   activeProfile: local
   #  discoveryUrl: http://spring-cloud-kubernetes-discoveryserver:80
   logPath: /root/logs
+
+env:
+  - name: GIT_USERNAME
+    valueFrom:
+      secretKeyRef:
+        name: github-auth
+        key: username
+  - name: GIT_PASSWORD
+    valueFrom:
+      secretKeyRef:
+        name: github-auth
+        key: password

@@ -17,6 +17,7 @@ spec:
     spec:
       containers:
         - name: {{ .Values.service.name }}
+          env: {{ .Values.env | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.tag }}"
           imagePullPolicy: Always
           ports:
