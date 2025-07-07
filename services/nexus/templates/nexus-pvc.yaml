@@ -9,6 +9,5 @@ spec:
   resources:
     requests:
       storage: 20Gi
-{{/*  storageClassName: {{ .Values.service.name }}-pv*/}}
   volumeMode: Filesystem
   volumeName:  miroit-nexus-pv
