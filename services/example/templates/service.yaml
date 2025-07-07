@@ -6,6 +6,12 @@ spec:
   selector:
     app: {{ .Values.name }}
     track: stable
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.port }}
+      protocol: TCP
+      name: http
 
 ---
 apiVersion: v1
