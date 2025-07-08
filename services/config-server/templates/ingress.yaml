@@ -3,17 +3,17 @@ kind: Ingress
 metadata:
   name: {{ .Values.service.name }}-ingress
   annotations:
-#    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
     - host: {{ .Values.service.name }}.miroit.kro.kr
       http:
         paths:
-          - path: /api
+          - path: /
             pathType: Prefix
             backend:
               service:
-                name: {{ .Values.service.name }}-active
+                name: {{ .Values.service.name }}
                 port:
                   number: 8888
