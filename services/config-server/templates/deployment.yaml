@@ -1,5 +1,5 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Rollout
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: {{ .Values.service.name }}
   labels:
@@ -46,10 +46,3 @@ spec:
         - name: {{ .Values.service.name }}-log
           persistentVolumeClaim:
             claimName: {{ .Values.service.name }}-log-pvc
-  strategy:
-    blueGreen:
-      activeService: {{ .Values.service.name }}-active
-      previewService: {{ .Values.service.name }}-preview
-      autoPromotionEnabled: true
-      scaleDownDelaySeconds: 30
-      scaleDownDelayRevisionLimit: 1

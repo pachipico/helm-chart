@@ -5,10 +5,10 @@ metadata:
   labels:
     type: local
 spec:
-{{/*  storageClassName: ""*/}}
   capacity:
     storage: 20Gi
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "/root/nexus"
+    path: "/root/nexus-data"

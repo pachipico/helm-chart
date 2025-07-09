@@ -1,18 +1,18 @@
-name: notification-api
+name: gateway
 
 service:
-  name: notification-api
+  name: gateway
   type: ClusterIP
-  port: 9093
+  port: 9000
 
 image:
-  repository: miroit/notification-api
-tag: 'c8d08b1'
+  repository: miroit/gateway
+tag: '373244d'
 
 replicaCount: 1
 
 global:
   #  configMapName: dev-configmap
-  activeProfile: dev
+  activeProfile: local
   #  discoveryUrl: http://spring-cloud-kubernetes-discoveryserver:80
   logPath: /root/logs

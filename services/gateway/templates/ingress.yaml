@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: {{ .Values.service.name }}-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+#    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
@@ -16,4 +16,4 @@ spec:
               service:
                 name: {{ .Values.service.name }}
                 port:
-                  number: 8888
+                  number: 9000

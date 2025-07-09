@@ -2,12 +2,12 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: {{ .Values.service.name }}-pvc
-  namespace: nexus
+  namespace: miroit-access
 spec:
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce
   resources:
     requests:
       storage: 20Gi
-{{/*  storageClassName: {{ .Values.service.name }}-pv*/}}
   volumeMode: Filesystem
+  volumeName:  miroit-nexus-pv

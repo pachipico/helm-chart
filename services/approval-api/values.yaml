@@ -1,13 +1,13 @@
-name: notification-api
+name: approval-api
 
 service:
-  name: notification-api
+  name: approval-api
   type: ClusterIP
-  port: 9093
+  port: 9094
 
 image:
-  repository: miroit/notification-api
-tag: 'c8d08b1'
+  repository: miroit/approval-api
+tag: 'cfa2fa3'
 
 replicaCount: 1
 
