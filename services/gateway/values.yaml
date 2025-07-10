@@ -12,7 +12,4 @@ tag: 'be105e5'
 replicaCount: 1
 
 global:
-  #  configMapName: dev-configmap
-  activeProfile: local
-  #  discoveryUrl: http://spring-cloud-kubernetes-discoveryserver:80
   logPath: /root/logs
