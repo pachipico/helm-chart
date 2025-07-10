@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/visit-api
-tag: '13c6a7b'
+tag: '960b5ae'
 
 replicaCount: 1
 
