@@ -1,6 +1,6 @@
 apiVersion: v2
-name: notification-api
-description: miro-sys notification-api chart
+name: hr-api
+description: miro-sys hr-api chart
 
 # A chart can be either an 'application' or a 'library' chart.
 #
