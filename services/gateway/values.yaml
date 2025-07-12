@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/gateway
-tag: 'fdb21cb'
+tag: 'd980ee2'
 
 replicaCount: 1
 
