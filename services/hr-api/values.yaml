@@ -13,3 +13,7 @@ replicaCount: 1
 
 global:
   logPath: /root/logs
+
+spring:
+  profiles:
+    active: dev
