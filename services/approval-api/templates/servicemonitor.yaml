@@ -5,6 +5,7 @@ metadata:
   namespace: monitoring
   labels:
     release: prometheus-stack
+    service_type: backend
 spec:
   selector:
     matchLabels:
