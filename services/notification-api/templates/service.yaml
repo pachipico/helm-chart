@@ -5,6 +5,7 @@ metadata:
   labels:
     gateway-access: "true"
     app: {{ .Values.name }}
+    service: {{ .Values.name }}
 spec:
   selector:
     app: {{ .Values.name }}
