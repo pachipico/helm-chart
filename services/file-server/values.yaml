@@ -643,6 +643,12 @@ serverBlock: |-
       return 200 'OK';
       add_header Content-Type text/plain;
     }
+  
+    location /status {
+      stub_status;
+      allow 127.0.0.1;
+      deny all;
+    }
   }
 ## @param streamServerBlock Custom stream server block to be added to NGINX configuration
 ## streamServerBlock: |-
