@@ -11,4 +11,4 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: /files
+    path: /root/uploaded_files
