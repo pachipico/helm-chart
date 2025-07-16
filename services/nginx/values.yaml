@@ -622,9 +622,6 @@ serverBlock: |-
 
     server_name _;
 
-#    ssl_certificate     /opt/bitnami/nginx/certs/tls.crt;
-#    ssl_certificate_key /opt/bitnami/nginx/certs/tls.key;
-
     root /files;
     index index.html;
 
