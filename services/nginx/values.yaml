@@ -451,7 +451,7 @@ extraVolumes:
 ##
 extraVolumeMounts:
   - name: "file-volume"
-    mountPath: /files
+    mountPath: /root/uploaded-files
 ## Pods Service Account
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
 ##
