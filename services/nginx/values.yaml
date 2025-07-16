@@ -35,10 +35,10 @@ global:
 
 ## @param nameOverride String to partially override nginx.fullname template (will maintain the release name)
 ##
-nameOverride: "file-nginx"
+nameOverride: "file-server"
 ## @param fullnameOverride String to fully override nginx.fullname template
 ##
-fullnameOverride: "file-nginx"
+fullnameOverride: "file-server"
 ## @param namespaceOverride String to fully override common.names.namespace
 ##
 namespaceOverride: "miroit-access"
@@ -1087,8 +1087,9 @@ metrics:
     ##   prometheus: my-prometheus
     ##
     selector:
-      app: file-nginx
+      app: file-server
       release: prometheus-stack
+      service_type: server
     ## @param metrics.serviceMonitor.labels Additional labels that can be used so PodMonitor will be discovered by Prometheus
     ##
     labels: {}
