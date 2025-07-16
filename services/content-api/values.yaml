@@ -1,12 +1,12 @@
-name: file-server
+name: content-api
 
 service:
-  name: file-server
+  name: content-api
   type: ClusterIP
   port: 9092
 
 image:
-  repository: miroit/file-server
+  repository: miroit/content-api
 tag: '025d20f'
 
 replicaCount: 1
