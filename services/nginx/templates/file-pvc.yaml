@@ -10,4 +10,4 @@ spec:
     requests:
       storage: 20Gi
   volumeMode: Filesystem
-  volumeName:  content-api-file-pv
+  volumeName:  file-pv
