@@ -13,6 +13,7 @@ replicaCount: 1
 
 global:
   logPath: /root/logs
+  filePath: /root/uploaded_files
 
 spring:
   profiles:

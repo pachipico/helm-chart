@@ -27,6 +27,8 @@ spec:
           volumeMounts:
             - name: {{ .Values.service.name }}-log
               mountPath: /log
+            - name: {{ .Values.service.name }}-file
+              mountPath: /file
           livenessProbe:
             httpGet:
               path: /actuator/health
@@ -48,6 +50,9 @@ spec:
         - name: {{ .Values.service.name }}-log
           persistentVolumeClaim:
             claimName: {{ .Values.service.name }}-log-pvc
+        - name: {{ .Values.service.name }}-file
+          persistentVolumeClaim:
+            claimName: {{ .Values.service.name }}-file-pvc
   strategy:
     blueGreen:
       activeService: {{ .Values.service.name }}-active
