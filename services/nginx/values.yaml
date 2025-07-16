@@ -618,14 +618,12 @@ cloneStaticSiteFromGit:
 serverBlock: |-
   server {
     listen 0.0.0.0:8080;
-
     server_name _;
 
     root /files;
-    index index.html;
 
     location / {
-      try_files $uri $uri/ =404;
+      try_files /test.txt =404;
     }
   }
 ## @param streamServerBlock Custom stream server block to be added to NGINX configuration
