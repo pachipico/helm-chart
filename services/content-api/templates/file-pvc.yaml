@@ -10,4 +10,4 @@ spec:
     requests:
       storage: 20Gi
   volumeMode: Filesystem
-  volumeName:  miroit-nexus-pv
+  volumeName:  content-api-file-pv
