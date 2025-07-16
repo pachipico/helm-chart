@@ -616,18 +616,18 @@ cloneStaticSiteFromGit:
 ##   }
 ##
 serverBlock: |-
+  map $http_user_agent $loggable {
+  default 1;
+  ~*kube-probe 0;
+  }
+  
   server {
     listen 0.0.0.0:8080;
     server_name _;
 
     root /files;
   
-    set $log_avoid 0;
-    if ($http_user_agent ~* "kube-probe") {
-      set $log_avoid 1;
-    }
-
-    access_log /dev/stdout combined if=$log_avoid;
+    access_log /dev/stdout combined if=$loggable;
 
     location / {
       try_files /test.txt =404;
