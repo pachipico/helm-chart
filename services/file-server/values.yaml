@@ -629,8 +629,14 @@ serverBlock: |-
   
     access_log /dev/stdout combined if=$loggable;
 
+    error_page 404 /404.txt;
+
     location / {
-      try_files /404.txt =404;
+      try_files $uri $uri/ =404;
+    }
+
+    location = /404.txt {
+      internal;
     }
   }
 ## @param streamServerBlock Custom stream server block to be added to NGINX configuration
