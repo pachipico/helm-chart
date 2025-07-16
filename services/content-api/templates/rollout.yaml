@@ -28,7 +28,7 @@ spec:
             - name: {{ .Values.service.name }}-log
               mountPath: /log
             - name: {{ .Values.service.name }}-file
-              mountPath: /file
+              mountPath: /files
           livenessProbe:
             httpGet:
               path: /actuator/health
