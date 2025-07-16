@@ -968,7 +968,7 @@ healthIngress:
 metrics:
   ## @param metrics.enabled Start a Prometheus exporter sidecar container
   ##
-  enabled: false
+  enabled: true
   ## Bitnami NGINX Prometheus Exporter image
   ## ref: https://hub.docker.com/r/bitnami/nginx-exporter/tags/
   ## @param metrics.image.registry [default: REGISTRY_NAME] NGINX Prometheus exporter image registry
@@ -1058,10 +1058,10 @@ metrics:
   serviceMonitor:
     ## @param metrics.serviceMonitor.enabled Creates a Prometheus Operator ServiceMonitor (also requires `metrics.enabled` to be `true`)
     ##
-    enabled: false
+    enabled: true
     ## @param metrics.serviceMonitor.namespace Namespace in which Prometheus is running
     ##
-    namespace: ""
+    namespace: "monitoring"
     ## @param metrics.serviceMonitor.tlsConfig [object] TLS configuration used for scrape endpoints used by Prometheus
     ##
     tlsConfig: {}
@@ -1088,6 +1088,7 @@ metrics:
     ##
     selector:
       app: file-nginx
+      release: prometheus-stack
     ## @param metrics.serviceMonitor.labels Additional labels that can be used so PodMonitor will be discovered by Prometheus
     ##
     labels: {}
