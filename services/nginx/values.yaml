@@ -141,7 +141,7 @@ extraEnvVarsSecret: ""
 replicaCount: 1
 ## @param revisionHistoryLimit The number of old history to retain to allow rollback
 ##
-revisionHistoryLimit: 10
+revisionHistoryLimit: 3
 ## @param updateStrategy.type NGINX deployment strategy type
 ## @param updateStrategy.rollingUpdate NGINX deployment rolling update configuration parameters
 ## ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
@@ -621,6 +621,13 @@ serverBlock: |-
     server_name _;
 
     root /files;
+  
+    set $log_avoid 0;
+    if ($http_user_agent ~* "kube-probe") {
+      set $log_avoid 1;
+    }
+
+    access_log /dev/stdout combined if=$log_avoid;
 
     location / {
       try_files /test.txt =404;
