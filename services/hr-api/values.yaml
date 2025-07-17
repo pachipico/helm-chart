@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/hr-api
-tag: 'cf27ff8'
+tag: '661276f'
 
 replicaCount: 1
 
