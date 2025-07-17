@@ -4,6 +4,7 @@ metadata:
   name: {{ .Values.name }}
   namespace: monitoring
   labels:
+    app: {{ .Values.name }}
     release: prometheus-stack
     service_type: backend
 spec:
