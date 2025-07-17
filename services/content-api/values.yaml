@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/content-api
-tag: '2cabd3d'
+tag: '4998fee'
 
 replicaCount: 1
 
