@@ -53,7 +53,10 @@ clusterDomain: cluster.local
 extraDeploy: []
 ## @param commonLabels Add labels to all the deployed resources
 ##
-commonLabels: {}
+commonLabels:
+  app: file-server
+  release: prometheus-stack
+  service_type: server
 ## @param commonAnnotations Add annotations to all the deployed resources
 ##
 commonAnnotations:
