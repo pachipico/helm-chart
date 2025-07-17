@@ -5,6 +5,9 @@ metadata:
   namespace: miroit-access
   labels:
     service: {{ .Values.name }}
+    app: {{ .Values.service.name }}
+    release: prometheus-stack
+    service_type: server
 spec:
   ports:
     - name: http
