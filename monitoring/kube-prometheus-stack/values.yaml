@@ -1588,8 +1588,7 @@ kubeApiServer:
 
     ## Additional labels
     ##
-    additionalLabels:
-      foo: bar
+    additionalLabels: {}
     #  foo: bar
 
     ## defines the labels which are transferred from the associated Kubernetes Service object onto the ingested metrics.
