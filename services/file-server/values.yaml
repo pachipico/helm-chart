@@ -628,9 +628,15 @@ serverBlock: |-
     listen 0.0.0.0:8080;
     server_name _;
 
+
     root /files;
   
     access_log /dev/stdout combined if=$loggable;
+  
+    location ~* \.(?:jpg|jpeg|gif|png|ico|css|js)$ {
+      expires 30d;
+      add_header Cache-Control "public";
+    }
 
     location / {
         try_files $uri =404;
