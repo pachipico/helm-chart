@@ -26,7 +26,7 @@ spec:
               value: {{ .Values.spring.profiles.active }}
           volumeMounts:
             - name: {{ .Values.service.name }}-log
-              mountPath: /app/log
+              mountPath: /app/logs
           livenessProbe:
             httpGet:
               path: /actuator/health
