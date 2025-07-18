@@ -627,6 +627,12 @@ serverBlock: |-
   server {
     listen 0.0.0.0:8080;
     server_name _;
+  
+    gzip on;
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_types text/plain text/css application/json application/javascript application/x-javascript text/xml application/xml application/xml+rss text/javascript;
 
 
     root /files;
