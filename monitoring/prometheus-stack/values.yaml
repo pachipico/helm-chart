@@ -1338,12 +1338,12 @@ grafana:
   # # To make Grafana persistent (Using Statefulset)
   # #
   persistence:
-    enabled: false
-  #   type: sts
-  #   storageClassName: "storageClassName"
-  #   accessModes:
-  #     - ReadWriteOnce
-  #   size: 20Gi
+    enabled: true
+    type: sts
+    storageClassName: hostpath
+    accessModes:
+       - ReadWriteOnce
+    size: 5Gi
   #   finalizers:
   #     - kubernetes.io/pvc-protection
 
@@ -4317,18 +4317,18 @@ prometheus:
     storageSpec: {}
     ## Using PersistentVolumeClaim
     ##
-    #  volumeClaimTemplate:
-    #    spec:
-    #      storageClassName: gluster
-    #      accessModes: ["ReadWriteOnce"]
-    #      resources:
-    #        requests:
-    #          storage: 50Gi
+    volumeClaimTemplate:
+      spec:
+        storageClassName: hostpath
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 8Gi
     #      selector: {}
 
     ## Using tmpfs volume
     ##
-    emptyDir: {}
+    #  emptyDir:
     #    medium: Memory
 
     # Additional volumes on the output StatefulSet definition.
