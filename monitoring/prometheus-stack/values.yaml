@@ -1337,8 +1337,8 @@ grafana:
 
   # # To make Grafana persistent (Using Statefulset)
   # #
-  # persistence:
-  #   enabled: true
+  persistence:
+    enabled: false
   #   type: sts
   #   storageClassName: "storageClassName"
   #   accessModes:
@@ -4328,7 +4328,7 @@ prometheus:
 
     ## Using tmpfs volume
     ##
-    #  emptyDir:
+    emptyDir: {}
     #    medium: Memory
 
     # Additional volumes on the output StatefulSet definition.
