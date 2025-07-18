@@ -1358,7 +1358,7 @@ grafana:
   #
   persistence:
     enabled: true
-    type: sts
+    existingClaim: grafana-pvc
     storageClassName: "hostpath"
     accessModes:
       - ReadWriteOnce
