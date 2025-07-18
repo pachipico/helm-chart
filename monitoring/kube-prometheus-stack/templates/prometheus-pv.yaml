@@ -1,15 +1,13 @@
-
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: grafana-pv
-  labels:
-    type: local
+  name: prometheus-pv
 spec:
-  storageClassName: hostpath
   capacity:
     storage: 10Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/root/grafana"
+    path: /mnt/data/prometheus
+  storageClassName: hostpath
+  persistentVolumeReclaimPolicy: Retain
