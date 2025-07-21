@@ -4496,14 +4496,20 @@ prometheus:
       #     #   access_key: ""
       #     #   secret_key: ""
 
+    reloader:
+      # -- Enable the config reloader.
+      # @param prometheus.reloader.enabled
+      enabled: true
+      # -- Set the port for the reloader to listen on.
+      # @param prometheus.reloader.port
+      port: 8080
+      # -- Enable the reloader port.
+      # @param prometheus.reloader.enableWebPort
+      enableWebPort: false
+
     ## Containers allows injecting additional containers. This is meant to allow adding an authentication proxy to a Prometheus pod.
     ## if using proxy extraContainer update targetPort with proxy container port
-    containers:
-      - name: init-config-reloader
-        ports: []
-
-      - name: config-reloader
-        ports: []
+    containers: []
     # containers:
     # - name: oauth-proxy
     #   image: quay.io/oauth2-proxy/oauth2-proxy:v7.10.0
