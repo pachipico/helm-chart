@@ -4319,7 +4319,7 @@ prometheus:
     ##
       volumeClaimTemplate:
         spec:
-          storageClassName: ""
+          storageClassName: "hostpath"
           accessModes: ["ReadWriteOnce"]
           resources:
             requests:
