@@ -2633,7 +2633,7 @@ prometheusOperator:
   livenessProbe:
     enabled: true
     failureThreshold: 3
-    initialDelaySeconds: 0
+    initialDelaySeconds: 60
     periodSeconds: 10
     successThreshold: 1
     timeoutSeconds: 1
@@ -2642,7 +2642,7 @@ prometheusOperator:
   readinessProbe:
     enabled: true
     failureThreshold: 3
-    initialDelaySeconds: 0
+    initialDelaySeconds: 60
     periodSeconds: 10
     successThreshold: 1
     timeoutSeconds: 1
@@ -2811,7 +2811,7 @@ prometheusOperator:
       livenessProbe:
         enabled: true
         failureThreshold: 3
-        initialDelaySeconds: 30
+        initialDelaySeconds: 60
         periodSeconds: 10
         successThreshold: 1
         timeoutSeconds: 1
@@ -2821,7 +2821,7 @@ prometheusOperator:
       readinessProbe:
         enabled: true
         failureThreshold: 3
-        initialDelaySeconds: 5
+        initialDelaySeconds: 60
         periodSeconds: 10
         successThreshold: 1
         timeoutSeconds: 1
@@ -4650,7 +4650,7 @@ prometheus:
     ## success after the WAL replay is complete. If set, the value should be
     ## greater than 60 (seconds). Otherwise it will be equal to 900 seconds (15
     ## minutes).
-    maximumStartupDurationSeconds: 0
+    maximumStartupDurationSeconds: 60
 
     ## Set default scrapeProtocols for Prometheus instances
     ## https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#scrapeprotocolstring-alias
