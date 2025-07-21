@@ -4518,7 +4518,12 @@ prometheus:
 
     ## InitContainers allows injecting additional initContainers. This is meant to allow doing some changes
     ## (permissions, dir tree) on mounted volumes before starting prometheus
-    initContainers: []
+    initContainers:
+      - name: init-config-reloader
+        securityContext:
+          runAsNonRoot: true
+          seccompProfile:
+            type: RuntimeDefault
 
     reloader:
       portName: reloader-web-2
