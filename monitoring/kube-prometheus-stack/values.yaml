@@ -4503,10 +4503,13 @@ prometheus:
         ports:
           - name: reloader-web-init
             containerPort: 8081
+            protocol: TCP
+
       - name: config-reloader
         ports:
           - name: reloader-web
             containerPort: 8080
+            protocol: TCP
     # containers:
     # - name: oauth-proxy
     #   image: quay.io/oauth2-proxy/oauth2-proxy:v7.10.0
