@@ -3336,7 +3336,7 @@ prometheusOperator:
       sha: ""
 
     # add prometheus config reloader liveness and readiness probe. Default: false
-    enableProbe: false
+    enableProbe: true
 
     # resource config for prometheusConfigReloader
     resources: {}
@@ -3890,11 +3890,13 @@ prometheus:
   ##
   prometheusSpec:
     livenessProbe:
+      enabled: true
       initialDelaySeconds: 180
       periodSeconds: 15
       timeoutSeconds: 5
       failureThreshold: 6
     readinessProbe:
+      enabled: true
       initialDelaySeconds: 60
       periodSeconds: 10
       timeoutSeconds: 5
