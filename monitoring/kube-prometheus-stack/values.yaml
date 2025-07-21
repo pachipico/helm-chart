@@ -1191,7 +1191,7 @@ alertmanager:
 
     ## Minimum number of seconds for which a newly created pod should be ready without any of its container crashing for it to
     ## be considered available. Defaults to 0 (pod will be considered available as soon as it is ready).
-    minReadySeconds: 0
+    minReadySeconds: 90
 
     ## Additional configuration which is not covered by the properties above. (passed through tpl)
     additionalConfig: {}
@@ -2632,7 +2632,7 @@ prometheusOperator:
     enabled: true
     failureThreshold: 3
     initialDelaySeconds: 60
-    periodSeconds: 10
+    periodSeconds: 30
     successThreshold: 1
     timeoutSeconds: 1
   ## Readiness probe for the prometheusOperator deployment
@@ -2641,7 +2641,7 @@ prometheusOperator:
     enabled: true
     failureThreshold: 3
     initialDelaySeconds: 60
-    periodSeconds: 10
+    periodSeconds: 30
     successThreshold: 1
     timeoutSeconds: 1
 
@@ -2810,7 +2810,7 @@ prometheusOperator:
         enabled: true
         failureThreshold: 3
         initialDelaySeconds: 60
-        periodSeconds: 10
+        periodSeconds: 30
         successThreshold: 1
         timeoutSeconds: 1
 
@@ -2820,7 +2820,7 @@ prometheusOperator:
         enabled: true
         failureThreshold: 3
         initialDelaySeconds: 60
-        periodSeconds: 10
+        periodSeconds: 30
         successThreshold: 1
         timeoutSeconds: 1
 
@@ -3027,7 +3027,7 @@ prometheusOperator:
     annotations: {}
 
   # -- terminationGracePeriodSeconds for container lifecycle hook
-  terminationGracePeriodSeconds: 30
+  terminationGracePeriodSeconds: 90
   # -- Specify lifecycle hooks for the  controller
   lifecycle: {}
   ## Configuration for Prometheus operator service
@@ -4646,7 +4646,7 @@ prometheus:
     ## success after the WAL replay is complete. If set, the value should be
     ## greater than 60 (seconds). Otherwise it will be equal to 900 seconds (15
     ## minutes).
-    maximumStartupDurationSeconds: 300
+    maximumStartupDurationSeconds: 600
 
     ## Set default scrapeProtocols for Prometheus instances
     ## https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#scrapeprotocolstring-alias
