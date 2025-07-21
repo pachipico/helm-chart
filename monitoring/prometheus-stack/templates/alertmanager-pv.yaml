@@ -4,6 +4,8 @@ metadata:
   name: alertmanager-pv
   labels:
     type: local
+    component: alertmanager
+
 spec:
   storageClassName: hostpath
   capacity:

@@ -4,6 +4,7 @@ metadata:
   name: prometheus-pv
   labels:
     type: local
+    component: prometheus
 spec:
   storageClassName: hostpath
   capacity:

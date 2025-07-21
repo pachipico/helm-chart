@@ -4,6 +4,7 @@ metadata:
   name: grafana-pv
   labels:
     type: local
+    component: grafana
 spec:
   storageClassName: hostpath
   capacity:
