@@ -1342,11 +1342,13 @@ grafana:
   # #
   persistence:
     enabled: true
-    type: sts
     storageClassName: hostpath
     accessModes:
        - ReadWriteOnce
     size: 5Gi
+    selector:
+      matchLabels:
+        component: grafana
   #   finalizers:
   #     - kubernetes.io/pvc-protection
 
