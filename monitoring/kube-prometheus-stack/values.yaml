@@ -4319,7 +4319,7 @@ prometheus:
     ##
       volumeClaimTemplate:
         spec:
-#          storageClassName: gluster
+          storageClassName: ""
           accessModes: ["ReadWriteOnce"]
           resources:
             requests:
