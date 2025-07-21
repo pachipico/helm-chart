@@ -4316,7 +4316,7 @@ prometheus:
     ## Prometheus StorageSpec for persistent data
     ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/platform/storage.md
     ##
-    storage:
+    storageSpec:
     ## Using PersistentVolumeClaim
     ##
       volumeClaimTemplate:
