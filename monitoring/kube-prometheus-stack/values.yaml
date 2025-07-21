@@ -4317,13 +4317,13 @@ prometheus:
     storageSpec:
     ## Using PersistentVolumeClaim
     ##
-      volumeClaimTemplate:
-        spec:
-          storageClassName: ""
-          accessModes: ["ReadWriteOnce"]
-          resources:
-            requests:
-              storage: 10Gi
+#      volumeClaimTemplate:
+#        spec:
+#          storageClassName: ""
+#          accessModes: ["ReadWriteOnce"]
+#          resources:
+#            requests:
+#              storage: 10Gi
     #      selector: {}
 
     ## Using tmpfs volume
