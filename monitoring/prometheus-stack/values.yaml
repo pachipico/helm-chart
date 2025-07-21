@@ -536,9 +536,9 @@ alertmanager:
       group_wait: 30s
       group_interval: 5m
       repeat_interval: 12h
-      receiver: 'null'
+      receiver: 'dummy'
       routes:
-      - receiver: 'null'
+      - receiver: 'dummy'
         matchers:
           - alertname = "Watchdog"
     receivers:
