@@ -4,7 +4,7 @@ metadata:
   name: {{ .Values.name }}
   namespace: monitoring
   labels:
-    release: prometheus-stack
+    release: kube-prometheus-stack
     service_type: backend
 spec:
   selector:

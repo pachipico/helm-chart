@@ -6,7 +6,7 @@ metadata:
   labels:
     service: {{ .Values.name }}
     app: {{ .Values.service.name }}
-    release: prometheus-stack
+    release: kube-prometheus-stack
     service_type: server
 spec:
   ports:

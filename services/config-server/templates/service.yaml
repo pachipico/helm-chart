@@ -4,7 +4,7 @@ metadata:
   name: {{ .Values.service.name }}
   labels:
     app: {{ .Values.service.name }}
-    release: prometheus-stack
+    release: kube-prometheus-stack
     service_type: server
 spec:
   selector:

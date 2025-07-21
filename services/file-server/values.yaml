@@ -55,12 +55,12 @@ extraDeploy: []
 ##
 commonLabels:
   app: file-server
-  release: prometheus-stack
+  release: kube-prometheus-stack
   service_type: server
 ## @param commonAnnotations Add annotations to all the deployed resources
 ##
 commonAnnotations:
-  release: prometheus-stack
+  release: kube-prometheus-stack
   service_type: server
 ## Enable diagnostic mode in the deployment(s)/statefulset(s)
 ##
@@ -1122,7 +1122,7 @@ metrics:
     ##
     selector:
       app: file-server
-      release: prometheus-stack
+      release: kube-prometheus-stack
       service_type: server
     ## @param metrics.serviceMonitor.labels Additional labels that can be used so PodMonitor will be discovered by Prometheus
     ##
