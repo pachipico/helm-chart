@@ -25,7 +25,3 @@ k
 -services/miroit-access/templates/ingress.yaml,4/7/4710e4925ca879bdfbb18fbdc4760ada7b179111
 _
 /services/miroit-access/templates/configmap.yaml,d/e/de6cf60b81448ca52e4a235023efd9fbcc8cdeaa
-W
-'monitoring/prometheus-stack/values.yaml,9/5/95fb00b3abd64ff4f2941ef92926493cd34bdd22
-\
-,monitoring/kube-prometheus-stack/values.yaml,f/b/fb5ff4a13d9fc3de47ac22c7cc6486a0471a287f
