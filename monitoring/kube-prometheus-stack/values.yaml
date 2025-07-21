@@ -31,7 +31,7 @@ commonLabels: {}
 ## Install Prometheus Operator CRDs
 ##
 crds:
-  enabled: true
+  enabled: false
   ## The CRD upgrade job mitigates the limitation of helm not being able to upgrade CRDs.
   ## The job will apply the CRDs to the cluster before the operator is deployed, using helm hooks.
   ## It deploy a corresponding clusterrole, clusterrolebinding and serviceaccount to apply the CRDs.
@@ -4519,6 +4519,9 @@ prometheus:
     ## InitContainers allows injecting additional initContainers. This is meant to allow doing some changes
     ## (permissions, dir tree) on mounted volumes before starting prometheus
     initContainers: []
+
+    reloader:
+      portName: reloader-web-2
 
     ## PortName to use for Prometheus.
     ##
