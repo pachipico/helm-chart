@@ -1026,6 +1026,7 @@ alertmanager:
           resources:
             requests:
               storage: 2Gi
+          volumeName: alertmanager-pv
           selector:
             matchLabels:
               component: alertmanager
@@ -1346,9 +1347,6 @@ grafana:
     accessModes:
        - ReadWriteOnce
     size: 5Gi
-    selector:
-      matchLabels:
-        component: grafana
   #   finalizers:
   #     - kubernetes.io/pvc-protection
 
@@ -4328,10 +4326,9 @@ prometheus:
         accessModes: ["ReadWriteOnce"]
         resources:
           requests:
-            storage: 2Gi
-        selector:
-          matchLabels:
-            component: prometheus
+            storage: 10Gi
+        volumeName: prometheus-pv
+
     #      selector: {}
 
     ## Using tmpfs volume
