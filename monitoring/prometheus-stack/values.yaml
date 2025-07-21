@@ -3889,6 +3889,16 @@ prometheus:
   ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#prometheusspec
   ##
   prometheusSpec:
+    livenessProbe:
+      initialDelaySeconds: 180
+      periodSeconds: 15
+      timeoutSeconds: 5
+      failureThreshold: 6
+    readinessProbe:
+      initialDelaySeconds: 60
+      periodSeconds: 10
+      timeoutSeconds: 5
+      failureThreshold: 3
     ## Statefulset's persistent volume claim retention policy
     ## whenDeleted and whenScaled determine whether
     ## statefulset's PVCs are deleted (true) or retained (false)
