@@ -31,7 +31,7 @@ commonLabels: {}
 ## Install Prometheus Operator CRDs
 ##
 crds:
-  enabled: false
+  enabled: true
   ## The CRD upgrade job mitigates the limitation of helm not being able to upgrade CRDs.
   ## The job will apply the CRDs to the cluster before the operator is deployed, using helm hooks.
   ## It deploy a corresponding clusterrole, clusterrolebinding and serviceaccount to apply the CRDs.
@@ -4314,7 +4314,7 @@ prometheus:
     ## Prometheus StorageSpec for persistent data
     ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/platform/storage.md
     ##
-    storageSpec:
+    storageSpec: {}
     ## Using PersistentVolumeClaim
     ##
 #      volumeClaimTemplate:
@@ -4495,17 +4495,6 @@ prometheus:
       #     #   region: ""
       #     #   access_key: ""
       #     #   secret_key: ""
-
-    reloader:
-      # -- Enable the config reloader.
-      # @param prometheus.reloader.enabled
-      enabled: true
-      # -- Set the port for the reloader to listen on.
-      # @param prometheus.reloader.port
-      port: 8080
-      # -- Enable the reloader port.
-      # @param prometheus.reloader.enableWebPort
-      enableWebPort: false
 
     ## Containers allows injecting additional containers. This is meant to allow adding an authentication proxy to a Prometheus pod.
     ## if using proxy extraContainer update targetPort with proxy container port
