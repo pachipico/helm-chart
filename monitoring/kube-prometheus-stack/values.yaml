@@ -2631,7 +2631,7 @@ prometheusOperator:
   livenessProbe:
     enabled: true
     failureThreshold: 3
-    initialDelaySeconds: 0
+    initialDelaySeconds: 60
     periodSeconds: 10
     successThreshold: 1
     timeoutSeconds: 1
@@ -2640,7 +2640,7 @@ prometheusOperator:
   readinessProbe:
     enabled: true
     failureThreshold: 3
-    initialDelaySeconds: 0
+    initialDelaySeconds: 60
     periodSeconds: 10
     successThreshold: 1
     timeoutSeconds: 1
@@ -2809,7 +2809,7 @@ prometheusOperator:
       livenessProbe:
         enabled: true
         failureThreshold: 3
-        initialDelaySeconds: 30
+        initialDelaySeconds: 60
         periodSeconds: 10
         successThreshold: 1
         timeoutSeconds: 1
@@ -2819,7 +2819,7 @@ prometheusOperator:
       readinessProbe:
         enabled: true
         failureThreshold: 3
-        initialDelaySeconds: 5
+        initialDelaySeconds: 60
         periodSeconds: 10
         successThreshold: 1
         timeoutSeconds: 1
