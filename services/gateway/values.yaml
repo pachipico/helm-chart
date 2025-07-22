@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/gateway
-tag: 'dac588b'
+tag: 'dbc6b84'
 
 replicaCount: 1
 
