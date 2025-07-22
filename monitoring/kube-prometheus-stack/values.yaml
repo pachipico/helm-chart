@@ -1218,25 +1218,22 @@ grafana:
   enabled: true
   namespaceOverride: ""
 
-  extraEnv:
-    - name: GF_UNIFIED_ALERTING_ENABLED
-      value: "true"
-    - name: GF_SMTP_ENABLED
-      value: "true"
-    - name: GF_SMTP_HOST
-      value: "mail.smtp2go.com:587"
-    - name: GF_SMTP_FROM_ADDRESS
-      value: "alertmanager@miroit.com"
-    - name: GF_SMTP_USER
-      valueFrom:
-        secretKeyRef:
-          name: grafana-smtp-credentials
-          key: smtp-username
-    - name: GF_SMTP_PASSWORD
-      valueFrom:
-        secretKeyRef:
-          name: grafana-smtp-credentials
-          key: smtp-password
+  grafana.ini:
+    unified_alerting:
+      enabled: true
+    smtp:
+      enabled: true
+      host: "mail.smtp2go.com:587"
+      user: "miroit"
+      password: "$__file{/etc/grafana/secrets/smtp-password}"
+      from_address: "alertmanager@miroit.com"
+      from_name: Grafana Alerter
+
+  extraSecretMounts:
+    - name: smtp-password-secret
+      secretName: grafana-smtp-credentials
+      mountPath: /etc/grafana/secrets
+      readOnly: true
 
   ## ForceDeployDatasources Create datasource configmap even if grafana deployment has been disabled
   ##
