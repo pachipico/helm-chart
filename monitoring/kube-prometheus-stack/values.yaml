@@ -1226,7 +1226,7 @@ grafana:
       host: "mail.smtp2go.com:587"
       user: "miroit"
       password: "$__file{/etc/grafana/secrets/smtp-password}"
-      from_address: "alertmanager@miroit.com"
+      from_address: "alertmanager@miroit.kro.kr"
       from_name: Grafana Alerter
 
   extraSecretMounts:
