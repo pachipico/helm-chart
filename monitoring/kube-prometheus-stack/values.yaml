@@ -1231,7 +1231,7 @@ grafana:
 
   extraSecretMounts:
     - name: smtp-password-secret
-      secretName: grafana-smtp-credentials
+      secretName: alertmanager-smtp
       mountPath: /etc/grafana/secrets
       readOnly: true
 
