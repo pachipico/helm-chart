@@ -1221,6 +1221,7 @@ grafana:
   grafana.ini:
     unified_alerting:
       enabled: true
+      templates: /etc/grafana/alerting-templates/*.tmpl
     smtp:
       enabled: true
       host: "mail.smtp2go.com:587"
