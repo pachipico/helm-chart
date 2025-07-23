@@ -4,9 +4,9 @@ metadata:
   name: grafana-alert-templates
 data:
   miro.tmpl: |
-    {{ define "template" }}
-    *[{{ .Status | toUpper }}]*: {{ .CommonLabels.alertname }}
+    {{ define "miro.template" }}
+      *[{{ .Status | upper }}]*: {{ .CommonLabels.alertname }}
     {{ range .Alerts }}
-    • {{ .Labels.instance }} – {{ .Annotations.summary }}
+      • {{ .Labels.instance }} – {{ .Annotations.summary }}
     {{ end }}
     {{ end }}
