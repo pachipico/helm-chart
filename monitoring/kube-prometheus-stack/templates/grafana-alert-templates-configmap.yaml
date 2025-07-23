@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: grafana-alert-templates
+  name: grafana-alert-templates-configmap
 data:
   miro.tmpl: |
     {{ define "miro.template" }}
