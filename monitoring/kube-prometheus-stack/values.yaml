@@ -1218,15 +1218,15 @@ grafana:
   enabled: true
   namespaceOverride: ""
 
-  extraVolumes:
-    - name: grafana-alert-templates
-      configMap:
-        name: grafana-alert-templates
-
-  extraVolumeMounts:
-    - name: grafana-alert-templates
-      mountPath: /etc/grafana/alerting/templates
-      readOnly: true
+#  extraVolumes:
+#    - name: grafana-alert-templates
+#      configMap:
+#        name: grafana-alert-templates
+#
+#  extraVolumeMounts:
+#    - name: grafana-alert-templates
+#      mountPath: /etc/grafana/alerting/templates
+#      readOnly: true
 
   grafana.ini:
     unified_alerting:
@@ -1447,7 +1447,12 @@ grafana:
         handleGrafanaManagedAlerts: false
         implementation: prometheus
 
-  extraConfigmapMounts: []
+  extraConfigmapMounts:
+    - name: grafana-alert-templates
+      configMap: grafana-alert-templates-configmap
+      mountPath: /etc/grafana/alerting/templates
+      readOnly: true
+
   # - name: certs-configmap
   #   mountPath: /etc/grafana/ssl/
   #   configMap: certs-configmap

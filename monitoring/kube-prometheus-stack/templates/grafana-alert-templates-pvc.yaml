@@ -1,10 +1,10 @@
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: grafana-alert-templates-pvc
-spec:
-  accessModes:
-    - ReadOnlyMany
-  resources:
-    requests:
-      storage: 1Gi
+{{/*apiVersion: v1*/}}
+{{/*kind: PersistentVolumeClaim*/}}
+{{/*metadata:*/}}
+{{/*  name: grafana-alert-templates-pvc*/}}
+{{/*spec:*/}}
+{{/*  accessModes:*/}}
+{{/*    - ReadOnlyMany*/}}
+{{/*  resources:*/}}
+{{/*    requests:*/}}
+{{/*      storage: 1Gi*/}}
