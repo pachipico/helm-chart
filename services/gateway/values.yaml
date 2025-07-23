@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/gateway
-tag: '9faeee3'
+tag: '1c3fe56'
 
 replicaCount: 1
 
