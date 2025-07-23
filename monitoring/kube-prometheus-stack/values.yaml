@@ -1231,7 +1231,6 @@ grafana:
   grafana.ini:
     unified_alerting:
       enabled: true
-      templates: /etc/grafana/alerting/templates/*.tmpl
     smtp:
       enabled: true
       host: "mail.smtp2go.com:587"
@@ -1446,13 +1445,6 @@ grafana:
         uid: alertmanager
         handleGrafanaManagedAlerts: false
         implementation: prometheus
-
-  extraConfigmapMounts:
-    - name: grafana-alert-templates
-      configMap: grafana-alert-templates-configmap
-      mountPath: /etc/grafana/alerting/templates
-      subPath: ""
-      readOnly: true
 
   # - name: certs-configmap
   #   mountPath: /etc/grafana/ssl/
