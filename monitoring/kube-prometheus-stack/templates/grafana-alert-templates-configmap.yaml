@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-alert-templates
+data:
+  miro.tmpl: |
+    {{ define "template" }}
+    *[{{ .Status | toUpper }}]*: {{ .CommonLabels.alertname }}
+    {{ range .Alerts }}
+    • {{ .Labels.instance }} – {{ .Annotations.summary }}
+    {{ end }}
+    {{ end }}

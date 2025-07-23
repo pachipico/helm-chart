@@ -1218,10 +1218,20 @@ grafana:
   enabled: true
   namespaceOverride: ""
 
+  extraVolumes:
+    - name: grafana-alert-templates
+      configMap:
+        name: grafana-alert-templates
+
+  extraVolumeMounts:
+    - name: grafana-alert-templates
+      mountPath: /etc/grafana/alerting/templates
+      readOnly: true
+
   grafana.ini:
     unified_alerting:
       enabled: true
-      templates: /etc/grafana/alerting-templates/*.tmpl
+      templates: /etc/grafana/alerting/templates/*.tmpl
     smtp:
       enabled: true
       host: "mail.smtp2go.com:587"
