@@ -6,9 +6,9 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: prometheus-pv
+  storageClassName: prometheus-storageclass
   capacity:
-    storage: 50Gi
+    storage: 10Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
