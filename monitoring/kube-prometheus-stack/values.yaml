@@ -4342,7 +4342,7 @@ prometheus:
     storageSpec:
       volumeClaimTemplate:
         spec:
-          storageClassName: "prometheus-storageclass"
+          storageClassName: "prometheus-pv"
           accessModes: ["ReadWriteOnce"]
           resources:
             requests:
