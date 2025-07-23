@@ -1450,7 +1450,8 @@ grafana:
   extraConfigmapMounts:
     - name: grafana-alert-templates
       configMap: grafana-alert-templates-configmap
-      mountPath: /etc/grafana/alerting/templates/miro.tmpl
+      mountPath: /etc/grafana/alerting/templates
+      subPath: ""
       readOnly: true
 
   # - name: certs-configmap
