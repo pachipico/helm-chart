@@ -62,6 +62,7 @@ commonLabels:
 commonAnnotations:
   release: kube-prometheus-stack
   service_type: server
+  team: monitoring
 ## Enable diagnostic mode in the deployment(s)/statefulset(s)
 ##
 diagnosticMode:

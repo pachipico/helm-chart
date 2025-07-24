@@ -6,6 +6,7 @@ metadata:
   labels:
     release: kube-prometheus-stack
     service_type: backend
+    team: monitoring
 spec:
   selector:
     matchLabels:
