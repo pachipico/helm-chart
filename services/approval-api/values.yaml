@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/approval-api
-tag: 'ce838be'
+tag: 'e547588'
 
 replicaCount: 1
 
