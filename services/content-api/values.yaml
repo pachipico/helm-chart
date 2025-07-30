@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/content-api
-tag: '1f9f46b'
+tag: '513d24c'
 
 replicaCount: 1
 
