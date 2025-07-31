@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/notification-api
-tag: '6fa1f81'
+tag: '21d6d6c'
 
 replicaCount: 1
 
