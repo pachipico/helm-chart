@@ -7,7 +7,7 @@ service:
 
 image:
   repository: miroit/miroit-access-fe
-tag: 'a617a21'
+tag: '02f94d8'
 
 replicaCount: 1
 
