@@ -7,7 +7,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: kwcompressor.miroit.kro.kr
+    - host: ...
       http:
         paths:
           - path: /
